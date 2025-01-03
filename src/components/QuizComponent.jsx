@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../data/firebase";
-import { useLocation, useNavigate } from "react-router-dom";
+import {Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function QuizComponent() {
   const [tests, setTests] = useState([]);
