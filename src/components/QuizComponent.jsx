@@ -15,7 +15,7 @@ export default function QuizComponent() {
   const navigate = useNavigate();
 
   // Foydalanuvchi ma'lumotlarini olish va tekshirish
-  const { name, group, group_id } = location.state || {};
+  const { name, group, group_id, surname } = location.state || {};
 
   useEffect(() => {
     if (!name || !group || !group_id) {
@@ -107,6 +107,7 @@ export default function QuizComponent() {
       const resultsCollection = collection(db, "results");
       await addDoc(resultsCollection, {
         name,
+        surname,
         group,
         group_id,
         score,
