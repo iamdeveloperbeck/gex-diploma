@@ -47,7 +47,7 @@ export default function QuizComponent() {
       const interval = setInterval(() => {
         setTimer((prev) => prev - 1);
       }, 1000);
-      clearInterval(interval);
+      return () => clearInterval(interval);
     } 
     if (timer === 0) {
       handleNext();
