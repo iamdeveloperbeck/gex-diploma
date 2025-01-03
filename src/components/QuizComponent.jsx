@@ -139,6 +139,7 @@ export default function QuizComponent() {
           <p className="text-lg">
             Yakuniy baho: {calculateGrade(score, tests.length)}
           </p>
+          <Link to="/" className="px-4 py-2 mt-[15px] bg-gray-200 rounded-lg hover:bg-blue-500 hover:text-white transition">Bosh sahifa</Link>
         </div>
       </div>
     );
