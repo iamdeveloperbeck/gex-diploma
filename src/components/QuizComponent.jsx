@@ -48,7 +48,8 @@ export default function QuizComponent() {
         setTimer((prev) => prev - 1);
       }, 1000);
       clearInterval(interval);
-    } else if (timer === 0) {
+    } 
+    if (timer === 0) {
       handleNext();
     }
   }, [timer, isQuizFinished]);
