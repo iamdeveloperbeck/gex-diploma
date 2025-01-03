@@ -49,7 +49,7 @@ const Login = () => {
     try {
       await addDoc(collection(db, "users"), formData);
       navigate("/quiz", {
-        state: { name: formData.name, group: formData.group, group_id },
+        state: { name: formData.name, surname: formDate.surname, group: formData.group, group_id },
       });
     } catch (err) {
       console.error("Error adding document: ", err);
