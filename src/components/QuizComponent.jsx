@@ -10,7 +10,7 @@ export default function QuizComponent() {
   const [tests, setTests] = useState([])
   const [currentTestIndex, setCurrentTestIndex] = useState(0)
   const [score, setScore] = useState(0)
-  const [timer, setTimer] = useState(40)
+  const [timer, setTimer] = useState(60)
   const [isLoading, setIsLoading] = useState(true)
   const [isQuizFinished, setIsQuizFinished] = useState(false)
   const [answers, setAnswers] = useState([])
@@ -286,7 +286,7 @@ export default function QuizComponent() {
   const handleNext = (currentAnswers = answers, currentScore = score) => {
     if (currentTestIndex < tests.length - 1) {
       setCurrentTestIndex((prev) => prev + 1)
-      setTimer(40)
+      setTimer(60)
       setSelectedOption(null)
     } else {
       // Oxirgi savol - testni yakunlash
